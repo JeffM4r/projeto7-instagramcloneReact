@@ -157,6 +157,56 @@ body {
   margin-top: 18px;
 }
 
+.conteudo{
+  position: relative;
+}
+
+.instagram-heart {   
+  width: 184px;
+  height: 162px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: url("https://imgur.com/rksyGE8.png") no-repeat center/contain;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.liked .conteudo .instagram-heart {
+  animation-duration: 1000ms;
+  animation-name: like-heart-animation;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes like-heart-animation{ 
+  0% { opacity:0; transform:scale(0); }
+  15% { opacity:.9; transform:scale(1.2); }
+  30% { transform:scale(.95); }
+  45%,
+  80% { opacity:.9; transform:scale(1); }
+}
+
+.heart:hover{
+  color: #8e8e8e;
+}
+.heartfilled{
+  color: #ed4956;
+  animation-duration: 1000ms;
+  animation-name: like-heart-animation;
+  animation-timing-function: ease-in-out;
+}
+.icones{
+  display: flex;
+  width: 200px;
+}
+.none{
+  display: none;
+}
+
+
 .post .topo {
   display: flex;
   justify-content: space-between;
